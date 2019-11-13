@@ -22,5 +22,17 @@ namespace UcPagTest
             //Assert
             Assert.AreEqual(valorFinal, resultado, 0.000, "juros calculado com sucesso");
         }
+
+        [TestMethod]
+        public void GenerateRateInterestIsTrue()
+        {
+            //Arrange
+            double expected = 0.01;
+            Pagamento confirma = new Pagamento();
+            //Act
+            var result = confirma.GerarTaxajuro();
+            //Assert
+            Assert.AreEqual(expected, result, 0.000,"taxa acionada com sucesso");
+        }
     }
 }
